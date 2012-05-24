@@ -1,4 +1,11 @@
-package com.motherrobot.sample.fragment;
+package com.multipane.app.activities;
+
+import com.multipane.app.R;
+import com.multipane.app.R.id;
+import com.multipane.app.R.layout;
+import com.multipane.app.fragments.DetailViewFragment;
+import com.multipane.app.fragments.MasterListFragment;
+import com.multipane.app.fragments.MasterListFragment.OnListItemSelectedListener;
 
 import android.content.Intent;
 import android.net.Uri;

@@ -1,4 +1,6 @@
-package com.motherrobot.sample.fragment;
+package com.multipane.app.fragments;
+
+import com.multipane.app.R;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -20,7 +22,6 @@ public class MasterListFragment extends ListFragment {
 	    
 	    listItemSelectedListener = (OnListItemSelectedListener) getActivity();
 	}
-
 	
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {

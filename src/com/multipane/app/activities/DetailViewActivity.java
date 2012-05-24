@@ -1,4 +1,9 @@
-package com.motherrobot.sample.fragment;
+package com.multipane.app.activities;
+
+import com.multipane.app.R;
+import com.multipane.app.R.id;
+import com.multipane.app.R.layout;
+import com.multipane.app.fragments.DetailViewFragment;
 
 import android.content.Intent;
 import android.os.Bundle;

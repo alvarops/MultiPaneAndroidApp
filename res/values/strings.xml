@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FragmentSample</string>
+    <string name="app_name">Multi-pane App</string>
     <string name="pick_label">Pick a Comic Date</string>
     <string-array name="strip_dates">
         <item>October 24, 2011</item>

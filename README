@@ -1,0 +1,5 @@
+This is a skeleton app with a master-list view and a detail view.
+
+The views are displayed using a multi-pane layout in tablet sized screens.
+
+Uses fragments but supports older Android SDK versions by including the support package.

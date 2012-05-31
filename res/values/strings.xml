@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="app_name">Multi-pane App</string>
     <string name="pick_label">Pick a Comic Date</string>
@@ -9,7 +9,7 @@
         <item>October 27, 2011</item>
         <item>October 28, 2011</item>
         <item>October 29, 2011</item>
-    </string-array>        
+    </string-array>
     <string-array name="strip_refs">
         <item>20111024</item>
         <item>20111025</item>
@@ -18,4 +18,5 @@
         <item>20111028</item>
         <item>20111029</item>
     </string-array>
+    <string name="api_key">Fmjtd%7Cluua2d08l9%2C2x%3Do5-hf20u</string>
 </resources>

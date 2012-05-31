@@ -1,16 +1,14 @@
 package com.multipane.app.activities;
 
-import com.multipane.app.R;
-import com.multipane.app.R.id;
-import com.multipane.app.R.layout;
-import com.multipane.app.fragments.DetailViewFragment;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+
+import com.mapquest.android.maps.MapFragmentActivity;
+import com.multipane.app.R;
+import com.multipane.app.fragments.DetailViewFragment;
 
 
-public class DetailViewActivity extends FragmentActivity {
+public class DetailViewActivity extends MapFragmentActivity {
 
 	
 	@Override
@@ -24,7 +22,13 @@ public class DetailViewActivity extends FragmentActivity {
         DetailViewFragment detailView = (DetailViewFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_detailview);
      
-        detailView.updateComic(content);
+        //detailView.updateComic(content);
     }
-	
+
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

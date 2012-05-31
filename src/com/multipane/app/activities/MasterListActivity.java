@@ -1,19 +1,16 @@
 package com.multipane.app.activities;
 
-import com.multipane.app.R;
-import com.multipane.app.R.id;
-import com.multipane.app.R.layout;
-import com.multipane.app.fragments.DetailViewFragment;
-import com.multipane.app.fragments.MasterListFragment;
-import com.multipane.app.fragments.MasterListFragment.OnListItemSelectedListener;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+
+import com.mapquest.android.maps.MapFragmentActivity;
+import com.multipane.app.R;
+import com.multipane.app.fragments.DetailViewFragment;
+import com.multipane.app.fragments.MasterListFragment;
 
 
-public class MasterListActivity extends FragmentActivity implements MasterListFragment.OnListItemSelectedListener {
+public class MasterListActivity extends MapFragmentActivity implements MasterListFragment.OnListItemSelectedListener {
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,8 +36,15 @@ public class MasterListActivity extends FragmentActivity implements MasterListFr
 			showContent.setData(Uri.parse(comicID));
 			startActivity(showContent);
 		} else {
-			detailView.updateComic(comicID);
+			//detailView.updateComic(comicID);
 		}
+	}
+
+
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }

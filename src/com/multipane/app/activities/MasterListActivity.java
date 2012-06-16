@@ -30,8 +30,6 @@ public class MasterListActivity extends MapFragmentActivity implements
 		setContentView(R.layout.master_list_fragment);
 	}
 
-	
-
 	@Override
 	public void onListItemSelected(Tweet tweet) {
 

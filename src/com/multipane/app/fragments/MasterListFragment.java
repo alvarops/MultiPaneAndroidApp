@@ -24,9 +24,7 @@ public class MasterListFragment extends ListFragment implements
 	private OnListItemSelectedListener listItemSelectedListener;
 	OnLocationChangedListener locationListener;
 
-	List<Tweet> tweets;
 	GeoLocation location;
-	TweetTask tweetTask;
 	TweetAdapter adapter;
 	private OnTweetsReceivedListener tweetsListener;
 
@@ -54,8 +52,8 @@ public class MasterListFragment extends ListFragment implements
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		Tweet tweet = tweets.get(position);
-
+		Tweet tweet = adapter.getItem(position);
+		
 		listItemSelectedListener.onListItemSelected(tweet);
 	}
 
@@ -81,9 +79,10 @@ public class MasterListFragment extends ListFragment implements
 	@Override
 	public void onTweetsReceived(List<Tweet> tweets) {
 		adapter.clear();
-		adapter.addAll(tweets);
+		for (Tweet tweet: tweets) {
+			adapter.add(tweet);
+		}
 		adapter.notifyDataSetChanged();
-		this.tweets = tweets;
 		tweetsListener.onTweetsReceived(tweets);
 	}
 

@@ -1,7 +1,7 @@
 package com.multipane.app.fragments;
 
 import twitter4j.GeoLocation;
-import twitter4j.Tweet;
+import twitter4j.Status;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
@@ -62,7 +62,7 @@ public class DetailViewFragment extends MapFragment {
 		return view;
 	}
 
-	public void showPOI(Tweet tweet) {
+	public void showPOI(Status tweet) {
 		// use a custom POI marker by referencing the bitmap file directly,
 		// using the filename as the resource ID
 
@@ -84,7 +84,7 @@ public class DetailViewFragment extends MapFragment {
 		Log.d(TAG, "This tweetpoint " + tweetPoint);
 		
 		// set GeoPoints and title/snippet to be used in the annotation view
-		OverlayItem poi1 = new OverlayItem(tweetPoint, tweet.getFromUser(), tweet.getText());
+		OverlayItem poi1 = new OverlayItem(tweetPoint, tweet.getUser().getName(), tweet.getText());
 		poiOverlay.addItem(poi1);
 		
 		// add a tap listener for the POI overlay

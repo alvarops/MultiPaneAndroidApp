@@ -1,6 +1,6 @@
 package com.multipane.app.model;
 
-import twitter4j.Tweet;
+import twitter4j.Status;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.multipane.app.R;
 
-public class TweetAdapter extends ArrayAdapter<Tweet> {
+public class TweetAdapter extends ArrayAdapter<Status> {
 	private static final String TAG = TweetAdapter.class.getSimpleName();
 	
 	private LayoutInflater inflator;
@@ -28,7 +28,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
-		Tweet tweet = getItem(position);
+        Status tweet = getItem(position);
 		ViewHolder holder;
 		
 		try {
@@ -41,7 +41,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
 			} else {
 				holder = (ViewHolder) convertView.getTag();
 			}
-			String key = tweet.getFromUser();
+			String key = tweet.getUser().getName();
 			String value = tweet.getText();
 
 			holder.key.setText(key);

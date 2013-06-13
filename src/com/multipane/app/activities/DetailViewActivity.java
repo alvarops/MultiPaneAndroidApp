@@ -1,6 +1,5 @@
 package com.multipane.app.activities;
 
-import twitter4j.Tweet;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
@@ -10,6 +9,8 @@ import com.multipane.app.R;
 import com.multipane.app.fragments.DetailViewFragment;
 import com.multipane.app.util.Extras;
 
+import twitter4j.Status;
+
 public class DetailViewActivity extends MapFragmentActivity {
 
 	@Override
@@ -18,8 +19,8 @@ public class DetailViewActivity extends MapFragmentActivity {
 		setContentView(R.layout.detail_view_fragment);
 
 		Intent launchingIntent = getIntent();
-		Tweet tweet = (Tweet) launchingIntent.getSerializableExtra(Extras.TWEET);
-		Location defaultLocation = (Location) launchingIntent.getParcelableExtra(Extras.DEFAULT_LOCATION);
+		Status tweet = (Status) launchingIntent.getSerializableExtra(Extras.TWEET);
+		Location defaultLocation = launchingIntent.getParcelableExtra(Extras.DEFAULT_LOCATION);
 
 		DetailViewFragment detailView = (DetailViewFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.fragment_detailview);
